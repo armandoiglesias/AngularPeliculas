@@ -1,0 +1,35 @@
+
+<div class="row">
+  <h2>Mas populares</h2>
+</div>
+
+<hr>
+<div class="row">
+  
+  <div class="card" *ngFor="let item of movies.results; let i = index">
+    <a [routerLink]="['/pelicula', item.id]" href="">
+      <img  class="card-img-top img-responsive" src="{{item | noimage}}" alt="Card image cap">
+    </a>
+    
+    <div class="card-body">
+      <h4 class="card-title">{{item.title}}</h4>
+      <p class="card-text">{{item.overview}}</p>
+      
+
+      <button class="btn">
+  Puntuacion <span class="badge badge-secondary">{{item.vote_average}}</span>
+  <span class="sr-only">unread messages</span>
+</button>
+<button class="btn">
+  Cantidad de Votos <span class="badge badge-secondary">{{item.vote_count}}</span>
+  <span class="sr-only">unread messages</span>
+</button>
+    </div>
+  </div>
+
+
+
+  
+</div>
+
+

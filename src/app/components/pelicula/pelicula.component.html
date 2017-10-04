@@ -1,0 +1,8 @@
+<div class="card" >
+  <img class="card-img-top" src="{{movie | noimage}}" alt="{{movie.tagline}}">
+  <div class="card-body">
+    <h4 class="card-title">{{movie.title}}</h4>
+    <p class="card-text">{{movie.overview}}</p>
+    <button [routerLink]="['/peliculas']" class="btn btn-primary">Volver</button>
+  </div>
+</div>
